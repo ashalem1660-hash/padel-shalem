@@ -20,7 +20,6 @@
             overflow-x: hidden;
         }
 
-        /* Animated background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -42,7 +41,6 @@
             padding: 20px;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 40px 20px;
@@ -105,11 +103,8 @@
             backdrop-filter: blur(10px);
         }
 
-        .info-chip .icon {
-            font-size: 20px;
-        }
+        .info-chip .icon { font-size: 20px; }
 
-        /* VS Section */
         .vs-section {
             display: flex;
             align-items: center;
@@ -131,9 +126,7 @@
             transition: transform 0.3s;
         }
 
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
+        .team-card:hover { transform: translateY(-5px); }
 
         .team-a {
             background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(255, 60, 0, 0.05));
@@ -162,10 +155,7 @@
         .team-a .team-names { color: #ff8c00; }
         .team-b .team-names { color: #00a3ff; }
 
-        .team-emoji {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+        .team-emoji { font-size: 3em; margin-bottom: 10px; }
 
         .vs-badge {
             background: linear-gradient(135deg, #ffd700, #ff6b00);
@@ -188,10 +178,7 @@
             100% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
         }
 
-        /* Player Cards */
-        .players-section {
-            margin: 50px 0;
-        }
+        .players-section { margin: 50px 0; }
 
         .section-title {
             text-align: center;
@@ -247,17 +234,9 @@
             background: linear-gradient(135deg, rgba(0, 163, 255, 0.3), rgba(0, 163, 255, 0.1));
         }
 
-        .player-avatar {
-            font-size: 4em;
-            margin-bottom: 10px;
-        }
+        .player-avatar { font-size: 4em; margin-bottom: 10px; }
 
-        .player-name {
-            font-size: 1.6em;
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-
+        .player-name { font-size: 1.6em; font-weight: 900; margin-bottom: 5px; }
         .player-card.team-orange .player-name { color: #ff8c00; }
         .player-card.team-blue .player-name { color: #00a3ff; }
 
@@ -281,9 +260,7 @@
         .player-card.team-orange .player-bio { border-color: rgba(255, 107, 0, 0.3); }
         .player-card.team-blue .player-bio { border-color: rgba(0, 163, 255, 0.3); }
 
-        .hunger-meter {
-            margin-top: 15px;
-        }
+        .hunger-meter { margin-top: 15px; }
 
         .hunger-label {
             display: flex;
@@ -299,7 +276,6 @@
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
             overflow: hidden;
-            position: relative;
         }
 
         .hunger-fill {
@@ -312,10 +288,7 @@
         .hunger-fill::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             animation: shimmer 2s infinite;
         }
@@ -339,10 +312,7 @@
             border-radius: 12px;
         }
 
-        .stat-value {
-            font-size: 1.3em;
-            font-weight: 900;
-        }
+        .stat-value { font-size: 1.3em; font-weight: 900; }
 
         .stat-label {
             font-size: 10px;
@@ -365,7 +335,6 @@
         .player-quote::before { content: '"'; }
         .player-quote::after { content: '"'; }
 
-        /* Countdown */
         .countdown-section {
             text-align: center;
             margin: 50px 0;
@@ -413,10 +382,7 @@
             margin-top: 5px;
         }
 
-        /* Predictions */
-        .predictions-section {
-            margin: 50px 0;
-        }
+        .predictions-section { margin: 50px 0; }
 
         .prediction-card {
             background: rgba(255,255,255,0.03);
@@ -448,21 +414,20 @@
             min-width: 180px;
         }
 
-        .vote-btn.orange {
-            border-color: rgba(255, 107, 0, 0.5);
+        .vote-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
         }
 
-        .vote-btn.orange:hover {
+        .vote-btn.orange { border-color: rgba(255, 107, 0, 0.5); }
+        .vote-btn.orange:hover:not(:disabled) {
             background: rgba(255, 107, 0, 0.2);
             border-color: #ff6b00;
             transform: scale(1.05);
         }
 
-        .vote-btn.blue {
-            border-color: rgba(0, 163, 255, 0.5);
-        }
-
-        .vote-btn.blue:hover {
+        .vote-btn.blue { border-color: rgba(0, 163, 255, 0.5); }
+        .vote-btn.blue:hover:not(:disabled) {
             background: rgba(0, 163, 255, 0.2);
             border-color: #00a3ff;
             transform: scale(1.05);
@@ -508,16 +473,35 @@
             transition: width 1s ease;
         }
 
-        .vote-percent {
-            font-weight: 700;
-            font-size: 14px;
-            min-width: 45px;
+        .vote-percent { font-weight: 700; font-size: 14px; min-width: 45px; }
+
+        .vote-status {
+            margin-top: 12px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            display: inline-block;
         }
 
-        /* Location */
-        .location-section {
-            margin: 50px 0;
+        .vote-status.success {
+            background: rgba(0, 200, 83, 0.1);
+            color: #00c853;
+            border: 1px solid rgba(0, 200, 83, 0.2);
         }
+
+        .vote-status.loading {
+            background: rgba(255, 215, 0, 0.1);
+            color: #ffd700;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .vote-status.error {
+            background: rgba(255, 0, 0, 0.1);
+            color: #ff4444;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+
+        .location-section { margin: 50px 0; }
 
         .location-card {
             background: rgba(255,255,255,0.03);
@@ -549,20 +533,9 @@
             border-radius: 50px;
         }
 
-        .location-details {
-            padding: 25px;
-        }
-
-        .location-name {
-            font-size: 1.4em;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .location-address {
-            color: #999;
-            margin-bottom: 20px;
-        }
+        .location-details { padding: 25px; }
+        .location-name { font-size: 1.4em; font-weight: 700; margin-bottom: 10px; }
+        .location-address { color: #999; margin-bottom: 20px; }
 
         .map-btn {
             display: inline-flex;
@@ -584,10 +557,7 @@
             box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
         }
 
-        /* Rules */
-        .rules-section {
-            margin: 50px 0;
-        }
+        .rules-section { margin: 50px 0; }
 
         .rules-card {
             background: rgba(255,255,255,0.03);
@@ -596,11 +566,7 @@
             padding: 30px;
         }
 
-        .rules-list {
-            list-style: none;
-            display: grid;
-            gap: 15px;
-        }
+        .rules-list { list-style: none; display: grid; gap: 15px; }
 
         .rules-list li {
             display: flex;
@@ -614,19 +580,10 @@
             transition: background 0.3s;
         }
 
-        .rules-list li:hover {
-            background: rgba(255,255,255,0.05);
-        }
+        .rules-list li:hover { background: rgba(255,255,255,0.05); }
+        .rules-list li .rule-icon { font-size: 24px; flex-shrink: 0; }
 
-        .rules-list li .rule-icon {
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        /* Trash Talk */
-        .trash-talk-section {
-            margin: 50px 0;
-        }
+        .trash-talk-section { margin: 50px 0; }
 
         .trash-talk-card {
             background: linear-gradient(135deg, rgba(255, 0, 60, 0.08), rgba(255, 107, 0, 0.05));
@@ -636,12 +593,7 @@
             text-align: center;
         }
 
-        .trash-messages {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
+        .trash-messages { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
 
         .trash-msg {
             padding: 15px 20px;
@@ -650,9 +602,7 @@
             transition: transform 0.3s;
         }
 
-        .trash-msg:hover {
-            transform: scale(1.02);
-        }
+        .trash-msg:hover { transform: scale(1.02); }
 
         .trash-msg.from-orange {
             background: rgba(255, 107, 0, 0.1);
@@ -668,16 +618,9 @@
             margin-right: 40px;
         }
 
-        .trash-msg .msg-author {
-            font-size: 12px;
-            color: #888;
-            margin-bottom: 5px;
-        }
+        .trash-msg .msg-author { font-size: 12px; color: #888; margin-bottom: 5px; }
 
-        /* Soundtrack */
-        .soundtrack-section {
-            margin: 50px 0;
-        }
+        .soundtrack-section { margin: 50px 0; }
 
         .soundtrack-card {
             background: rgba(255,255,255,0.03);
@@ -686,11 +629,7 @@
             padding: 30px;
         }
 
-        .song-list {
-            display: grid;
-            gap: 10px;
-            margin-top: 20px;
-        }
+        .song-list { display: grid; gap: 10px; margin-top: 20px; }
 
         .song-item {
             display: flex;
@@ -702,32 +641,12 @@
             transition: background 0.3s;
         }
 
-        .song-item:hover {
-            background: rgba(255,255,255,0.05);
-        }
+        .song-item:hover { background: rgba(255,255,255,0.05); }
+        .song-number { font-weight: 900; color: #555; font-size: 14px; width: 25px; }
+        .song-icon { font-size: 20px; }
+        .song-name { font-weight: 700; font-size: 14px; }
+        .song-artist { font-size: 12px; color: #888; }
 
-        .song-number {
-            font-weight: 900;
-            color: #555;
-            font-size: 14px;
-            width: 25px;
-        }
-
-        .song-icon {
-            font-size: 20px;
-        }
-
-        .song-name {
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .song-artist {
-            font-size: 12px;
-            color: #888;
-        }
-
-        /* Weather */
         .weather-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
@@ -737,17 +656,23 @@
             margin: 50px 0;
         }
 
-        .weather-temp {
-            font-size: 3em;
-            font-weight: 900;
+        .weather-temp { font-size: 3em; font-weight: 900; }
+        .weather-desc { color: #999; font-size: 14px; }
+
+        .mvp-section { margin: 50px 0; }
+
+        .mvp-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
         }
 
-        .weather-desc {
-            color: #999;
-            font-size: 14px;
-        }
+        .mvp-title { font-size: 1em; color: #ffd700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px; }
+        .mvp-trophy { font-size: 4em; margin: 10px 0; }
+        .mvp-text { color: #aaa; font-size: 15px; }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -755,16 +680,9 @@
             font-size: 14px;
         }
 
-        .footer .fire {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+        .footer .fire { font-size: 2em; margin-bottom: 10px; }
 
-        /* Share Button */
-        .share-section {
-            text-align: center;
-            margin: 30px 0;
-        }
+        .share-section { text-align: center; margin: 30px 0; }
 
         .share-btn {
             display: inline-flex;
@@ -788,38 +706,6 @@
             box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
         }
 
-        /* MVP Section */
-        .mvp-section {
-            margin: 50px 0;
-        }
-
-        .mvp-card {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .mvp-title {
-            font-size: 1em;
-            color: #ffd700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-        }
-
-        .mvp-trophy {
-            font-size: 4em;
-            margin: 10px 0;
-        }
-
-        .mvp-text {
-            color: #aaa;
-            font-size: 15px;
-        }
-
-        /* Animations on scroll */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -831,19 +717,38 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #00c853;
+            margin-top: 8px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #00c853;
+            border-radius: 50%;
+            animation: livePulse 1.5s infinite;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
         @media (max-width: 600px) {
             .hero h1 { font-size: 2em; }
             .vs-section { flex-direction: column; }
             .vs-badge { margin: 10px auto; }
             .team-card { min-width: unset; }
-            .player-stats { grid-template-columns: repeat(3, 1fr); }
             .countdown-unit { min-width: 70px; padding: 12px 15px; }
             .countdown-number { font-size: 2em; }
             .vote-container { flex-direction: column; align-items: center; }
         }
 
-        /* Confetti animation for winner prediction */
         .confetti {
             position: fixed;
             top: -10px;
@@ -869,22 +774,10 @@
             <h1>🎾 הפאדל של שלם</h1>
             <p class="subtitle">עימות הערב שכולם מחכים לו</p>
             <div class="match-info-bar">
-                <div class="info-chip">
-                    <span class="icon">📅</span>
-                    <span>היום בערב</span>
-                </div>
-                <div class="info-chip">
-                    <span class="icon">🕘</span>
-                    <span>21:00</span>
-                </div>
-                <div class="info-chip">
-                    <span class="icon">📍</span>
-                    <span>חולון</span>
-                </div>
-                <div class="info-chip">
-                    <span class="icon">🏟️</span>
-                    <span>2 VS 2</span>
-                </div>
+                <div class="info-chip"><span class="icon">📅</span><span>היום בערב</span></div>
+                <div class="info-chip"><span class="icon">🕘</span><span>21:00</span></div>
+                <div class="info-chip"><span class="icon">📍</span><span>חולון</span></div>
+                <div class="info-chip"><span class="icon">🏟️</span><span>2 VS 2</span></div>
             </div>
         </section>
 
@@ -928,142 +821,74 @@
         <section class="players-section">
             <h2 class="section-title">📋 תעודת הזהות של השחקנים</h2>
             <div class="players-grid">
-                <!-- שלם -->
                 <div class="player-card team-orange fade-in">
                     <div class="team-indicator">🔥</div>
                     <div class="player-avatar">👑</div>
                     <div class="player-name">שלם</div>
                     <div class="player-role">קפטן ומייסד הקבוצה</div>
-                    <div class="player-bio">
-                        המוח שמאחורי הכל. שלם לא סתם משחק פאדל — הוא חי ונושם את המשחק. אסטרטג מלידה, עם עין חדה לכל פינה במגרש. כשהוא מרים את המחבט, היריבים יודעים שהם בצרות. הביטחון שלו מדבק, והמנהיגות שלו על המגרש היא חסרת פשרות.
-                    </div>
+                    <div class="player-bio">המוח שמאחורי הכל. שלם לא סתם משחק פאדל — הוא חי ונושם את המשחק. אסטרטג מלידה, עם עין חדה לכל פינה במגרש. כשהוא מרים את המחבט, היריבים יודעים שהם בצרות.</div>
                     <div class="hunger-meter">
-                        <div class="hunger-label">
-                            <span>🔥 רעב להצלחה</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="hunger-bar">
-                            <div class="hunger-fill" style="width: 95%; background: linear-gradient(90deg, #ff6b00, #ff3c00);"></div>
-                        </div>
+                        <div class="hunger-label"><span>🔥 רעב להצלחה</span><span>95%</span></div>
+                        <div class="hunger-bar"><div class="hunger-fill" style="width: 95%; background: linear-gradient(90deg, #ff6b00, #ff3c00);"></div></div>
                     </div>
                     <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">⭐ 9.2</div>
-                            <div class="stat-label">דירוג</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">💪 92%</div>
-                            <div class="stat-label">מוטיבציה</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">🎯 88%</div>
-                            <div class="stat-label">דיוק</div>
-                        </div>
+                        <div class="stat"><div class="stat-value">⭐ 9.2</div><div class="stat-label">דירוג</div></div>
+                        <div class="stat"><div class="stat-value">💪 92%</div><div class="stat-label">מוטיבציה</div></div>
+                        <div class="stat"><div class="stat-value">🎯 88%</div><div class="stat-label">דיוק</div></div>
                     </div>
                     <div class="player-quote">היום אנחנו לא הולכים הביתה בלי ניצחון</div>
                 </div>
 
-                <!-- מרקו -->
                 <div class="player-card team-orange fade-in">
                     <div class="team-indicator">🔥</div>
                     <div class="player-avatar">🦁</div>
                     <div class="player-name">מרקו</div>
                     <div class="player-role">הלוחם השקט</div>
-                    <div class="player-bio">
-                        מרקו הוא מכונה. שקט מבחוץ, אבל מבפנים בוער אש שלא נכבית. כל חבטה שלו מחושבת, כל תזוזה על המגרש היא כמו ריקוד מתואם. הוא לא מדבר הרבה — הוא נותן למחבט לדבר בשבילו. השילוב שלו עם שלם הוא כימיה טהורה.
-                    </div>
+                    <div class="player-bio">מרקו הוא מכונה. שקט מבחוץ, אבל מבפנים בוער אש שלא נכבית. כל חבטה שלו מחושבת, כל תזוזה על המגרש היא כמו ריקוד מתואם. הוא נותן למחבט לדבר בשבילו.</div>
                     <div class="hunger-meter">
-                        <div class="hunger-label">
-                            <span>🔥 רעב להצלחה</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="hunger-bar">
-                            <div class="hunger-fill" style="width: 90%; background: linear-gradient(90deg, #ff6b00, #ff3c00);"></div>
-                        </div>
+                        <div class="hunger-label"><span>🔥 רעב להצלחה</span><span>90%</span></div>
+                        <div class="hunger-bar"><div class="hunger-fill" style="width: 90%; background: linear-gradient(90deg, #ff6b00, #ff3c00);"></div></div>
                     </div>
                     <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">⭐ 8.8</div>
-                            <div class="stat-label">דירוג</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">🧊 95%</div>
-                            <div class="stat-label">קור רוח</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">💨 90%</div>
-                            <div class="stat-label">מהירות</div>
-                        </div>
+                        <div class="stat"><div class="stat-value">⭐ 8.8</div><div class="stat-label">דירוג</div></div>
+                        <div class="stat"><div class="stat-value">🧊 95%</div><div class="stat-label">קור רוח</div></div>
+                        <div class="stat"><div class="stat-value">💨 90%</div><div class="stat-label">מהירות</div></div>
                     </div>
                     <div class="player-quote">אני לא צריך לדבר. המגרש ידבר בשבילי</div>
                 </div>
 
-                <!-- מנגב -->
                 <div class="player-card team-blue fade-in">
                     <div class="team-indicator">⚡</div>
                     <div class="player-avatar">🐺</div>
                     <div class="player-name">מנגב</div>
                     <div class="player-role">החיה שבמגרש</div>
-                    <div class="player-bio">
-                        מנגב הוא מי שגורם ליריבים לרעוד. אנרגיה בלתי נגמרת, רוח לחימה שלא מכירה כניעה, וכוח שהופך כל כדור לטיל. הוא רץ על כל כדור כאילו חייו תלויים בזה. אל תעשו טעות — מנגב הגיע הערב עם דבר אחד בראש: ניצחון.
-                    </div>
+                    <div class="player-bio">מנגב הוא מי שגורם ליריבים לרעוד. אנרגיה בלתי נגמרת, רוח לחימה שלא מכירה כניעה, וכוח שהופך כל כדור לטיל. הוא רץ על כל כדור כאילו חייו תלויים בזה.</div>
                     <div class="hunger-meter">
-                        <div class="hunger-label">
-                            <span>🔥 רעב להצלחה</span>
-                            <span>97%</span>
-                        </div>
-                        <div class="hunger-bar">
-                            <div class="hunger-fill" style="width: 97%; background: linear-gradient(90deg, #00a3ff, #0055ff);"></div>
-                        </div>
+                        <div class="hunger-label"><span>🔥 רעב להצלחה</span><span>97%</span></div>
+                        <div class="hunger-bar"><div class="hunger-fill" style="width: 97%; background: linear-gradient(90deg, #00a3ff, #0055ff);"></div></div>
                     </div>
                     <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">⭐ 9.0</div>
-                            <div class="stat-label">דירוג</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">🔋 98%</div>
-                            <div class="stat-label">אנרגיה</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">💥 93%</div>
-                            <div class="stat-label">עוצמה</div>
-                        </div>
+                        <div class="stat"><div class="stat-value">⭐ 9.0</div><div class="stat-label">דירוג</div></div>
+                        <div class="stat"><div class="stat-value">🔋 98%</div><div class="stat-label">אנרגיה</div></div>
+                        <div class="stat"><div class="stat-value">💥 93%</div><div class="stat-label">עוצמה</div></div>
                     </div>
                     <div class="player-quote">שלם ומרקו? עוד שני קורבנות לרשימה</div>
                 </div>
 
-                <!-- דודי -->
                 <div class="player-card team-blue fade-in">
                     <div class="team-indicator">⚡</div>
                     <div class="player-avatar">🦅</div>
                     <div class="player-name">דודי</div>
                     <div class="player-role">השועל הערמומי</div>
-                    <div class="player-bio">
-                        דודי הוא ההפתעה שאף אחד לא צופה. נראה רגוע ומשוחרר, אבל ברגע שהמשחק מתחיל הוא הופך לטורף. יש לו יכולת קריאת משחק יוצאת דופן — הוא תמיד יודע לאן הכדור הולך עוד לפני שהוא נשלח. הטריקים שלו על הרשת הם אגדיים.
-                    </div>
+                    <div class="player-bio">דודי הוא ההפתעה שאף אחד לא צופה. נראה רגוע ומשוחרר, אבל ברגע שהמשחק מתחיל הוא הופך לטורף. יש לו יכולת קריאת משחק יוצאת דופן וטריקים אגדיים על הרשת.</div>
                     <div class="hunger-meter">
-                        <div class="hunger-label">
-                            <span>🔥 רעב להצלחה</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="hunger-bar">
-                            <div class="hunger-fill" style="width: 88%; background: linear-gradient(90deg, #00a3ff, #0055ff);"></div>
-                        </div>
+                        <div class="hunger-label"><span>🔥 רעב להצלחה</span><span>88%</span></div>
+                        <div class="hunger-bar"><div class="hunger-fill" style="width: 88%; background: linear-gradient(90deg, #00a3ff, #0055ff);"></div></div>
                     </div>
                     <div class="player-stats">
-                        <div class="stat">
-                            <div class="stat-value">⭐ 8.7</div>
-                            <div class="stat-label">דירוג</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">🧠 96%</div>
-                            <div class="stat-label">I.Q משחק</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">🎭 91%</div>
-                            <div class="stat-label">טריקים</div>
-                        </div>
+                        <div class="stat"><div class="stat-value">⭐ 8.7</div><div class="stat-label">דירוג</div></div>
+                        <div class="stat"><div class="stat-value">🧠 96%</div><div class="stat-label">I.Q משחק</div></div>
+                        <div class="stat"><div class="stat-value">🎭 91%</div><div class="stat-label">טריקים</div></div>
                     </div>
                     <div class="player-quote">אני שועל. תלמדו לחיות עם זה</div>
                 </div>
@@ -1075,52 +900,42 @@
             <h2 class="section-title">🗣️ טראש טוק לפני המשחק</h2>
             <div class="trash-talk-card">
                 <div class="trash-messages">
-                    <div class="trash-msg from-orange">
-                        <div class="msg-author">🔥 שלם</div>
-                        מנגב ודודי, תכינו תירוצים מראש. אתם תצטרכו אותם הלילה 😏
-                    </div>
-                    <div class="trash-msg from-blue">
-                        <div class="msg-author">⚡ מנגב</div>
-                        שלם, אתה מדבר הרבה בשביל מישהו שהולך להפסיד 6-0 🤣
-                    </div>
-                    <div class="trash-msg from-orange">
-                        <div class="msg-author">🔥 מרקו</div>
-                        ...🦁 *מסתכל בשקט ומחדד את המחבט*
-                    </div>
-                    <div class="trash-msg from-blue">
-                        <div class="msg-author">⚡ דודי</div>
-                        מרקו, השקט שלך לא מפחיד אף אחד. הלילה אנחנו נגרום לך לדבר... תירוצים 🦅
-                    </div>
-                    <div class="trash-msg from-orange">
-                        <div class="msg-author">🔥 שלם</div>
-                        סבבה חבר׳ה, נדבר בשעה 21:00. על המגרש. בלי תירוצים. 💪
-                    </div>
+                    <div class="trash-msg from-orange"><div class="msg-author">🔥 שלם</div>מנגב ודודי, תכינו תירוצים מראש. אתם תצטרכו אותם הלילה 😏</div>
+                    <div class="trash-msg from-blue"><div class="msg-author">⚡ מנגב</div>שלם, אתה מדבר הרבה בשביל מישהו שהולך להפסיד 6-0 🤣</div>
+                    <div class="trash-msg from-orange"><div class="msg-author">🔥 מרקו</div>...🦁 *מסתכל בשקט ומחדד את המחבט*</div>
+                    <div class="trash-msg from-blue"><div class="msg-author">⚡ דודי</div>מרקו, השקט שלך לא מפחיד אף אחד. הלילה אנחנו נגרום לך לדבר... תירוצים 🦅</div>
+                    <div class="trash-msg from-orange"><div class="msg-author">🔥 שלם</div>סבבה חבר׳ה, נדבר בשעה 21:00. על המגרש. בלי תירוצים. 💪</div>
                 </div>
             </div>
         </section>
 
-        <!-- Prediction -->
+        <!-- Prediction with Supabase -->
         <section class="predictions-section fade-in">
             <h2 class="section-title">🔮 מי לוקח את הערב?</h2>
             <div class="prediction-card">
-                <p style="color: #aaa; margin-bottom: 10px;">הצביעו למי שלדעתכם ינצח הערב!</p>
+                <p style="color: #aaa; margin-bottom: 5px;">הצביעו למי שלדעתכם ינצח הערב!</p>
+                <div class="live-indicator">
+                    <div class="live-dot"></div>
+                    <span>הצבעות בזמן אמת מ-Supabase</span>
+                </div>
                 <div class="vote-container">
-                    <button class="vote-btn orange" onclick="vote('orange')">
+                    <button class="vote-btn orange" id="btnOrange" onclick="vote('orange')">
                         🔥 שלם & מרקו
                     </button>
-                    <button class="vote-btn blue" onclick="vote('blue')">
+                    <button class="vote-btn blue" id="btnBlue" onclick="vote('blue')">
                         ⚡ מנגב & דודי
                     </button>
                 </div>
                 <div class="vote-results" id="voteResults" style="display: none;">
-                    <span class="vote-percent" id="orangePercent" style="color: #ff8c00;">50%</span>
+                    <span class="vote-percent" id="orangePercent" style="color: #ff8c00;">0%</span>
                     <div class="vote-bar-container">
                         <div class="vote-bar-orange" id="orangeBar" style="width: 50%;"></div>
                         <div class="vote-bar-blue" id="blueBar" style="width: 50%;"></div>
                     </div>
-                    <span class="vote-percent" id="bluePercent" style="color: #00a3ff;">50%</span>
+                    <span class="vote-percent" id="bluePercent" style="color: #00a3ff;">0%</span>
                 </div>
                 <p style="color: #555; font-size: 13px; margin-top: 15px;" id="totalVotes"></p>
+                <div id="voteStatus"></div>
             </div>
         </section>
 
@@ -1137,30 +952,12 @@
             <h2 class="section-title">📜 חוקי הבית</h2>
             <div class="rules-card">
                 <ul class="rules-list">
-                    <li>
-                        <span class="rule-icon">🏆</span>
-                        <span>הקבוצה הראשונה שמגיעה לניצחון בסט (6 משחקים) עם הפרש של 2 לפחות</span>
-                    </li>
-                    <li>
-                        <span class="rule-icon">🤝</span>
-                        <span>פייר פליי - ללא ויכוחים, הכדור של מי שקרוב אליו</span>
-                    </li>
-                    <li>
-                        <span class="rule-icon">🧊</span>
-                        <span>הפסקת מים אחרי כל 3 משחקים</span>
-                    </li>
-                    <li>
-                        <span class="rule-icon">🚫</span>
-                        <span>אין בכיינות. הפסדת? תתמודד עם זה כמו גבר</span>
-                    </li>
-                    <li>
-                        <span class="rule-icon">📸</span>
-                        <span>חובה לתעד! צילומים ווידאו לזיכרון (ולראיות)</span>
-                    </li>
-                    <li>
-                        <span class="rule-icon">🍕</span>
-                        <span>המפסידים מזמינים אוכל אחרי המשחק!</span>
-                    </li>
+                    <li><span class="rule-icon">🏆</span><span>הקבוצה הראשונה שמגיעה לניצחון בסט (6 משחקים) עם הפרש של 2 לפחות</span></li>
+                    <li><span class="rule-icon">🤝</span><span>פייר פליי - ללא ויכוחים, הכדור של מי שקרוב אליו</span></li>
+                    <li><span class="rule-icon">🧊</span><span>הפסקת מים אחרי כל 3 משחקים</span></li>
+                    <li><span class="rule-icon">🚫</span><span>אין בכיינות. הפסדת? תתמודד עם זה כמו גבר</span></li>
+                    <li><span class="rule-icon">📸</span><span>חובה לתעד! צילומים ווידאו לזיכרון (ולראיות)</span></li>
+                    <li><span class="rule-icon">🍕</span><span>המפסידים מזמינים אוכל אחרי המשחק!</span></li>
                 </ul>
             </div>
         </section>
@@ -1185,46 +982,11 @@
             <div class="soundtrack-card">
                 <p style="color: #888; margin-bottom: 10px;">המוזיקה שתלווה את הקרב הערב 🔊</p>
                 <div class="song-list">
-                    <div class="song-item">
-                        <span class="song-number">01</span>
-                        <span class="song-icon">🎵</span>
-                        <div>
-                            <div class="song-name">Eye of the Tiger</div>
-                            <div class="song-artist">Survivor</div>
-                        </div>
-                    </div>
-                    <div class="song-item">
-                        <span class="song-number">02</span>
-                        <span class="song-icon">🎵</span>
-                        <div>
-                            <div class="song-name">Lose Yourself</div>
-                            <div class="song-artist">Eminem</div>
-                        </div>
-                    </div>
-                    <div class="song-item">
-                        <span class="song-number">03</span>
-                        <span class="song-icon">🎵</span>
-                        <div>
-                            <div class="song-name">We Will Rock You</div>
-                            <div class="song-artist">Queen</div>
-                        </div>
-                    </div>
-                    <div class="song-item">
-                        <span class="song-number">04</span>
-                        <span class="song-icon">🎵</span>
-                        <div>
-                            <div class="song-name">Remember The Name</div>
-                            <div class="song-artist">Fort Minor</div>
-                        </div>
-                    </div>
-                    <div class="song-item">
-                        <span class="song-number">05</span>
-                        <span class="song-icon">🎵</span>
-                        <div>
-                            <div class="song-name">Thunderstruck</div>
-                            <div class="song-artist">AC/DC</div>
-                        </div>
-                    </div>
+                    <div class="song-item"><span class="song-number">01</span><span class="song-icon">🎵</span><div><div class="song-name">Eye of the Tiger</div><div class="song-artist">Survivor</div></div></div>
+                    <div class="song-item"><span class="song-number">02</span><span class="song-icon">🎵</span><div><div class="song-name">Lose Yourself</div><div class="song-artist">Eminem</div></div></div>
+                    <div class="song-item"><span class="song-number">03</span><span class="song-icon">🎵</span><div><div class="song-name">We Will Rock You</div><div class="song-artist">Queen</div></div></div>
+                    <div class="song-item"><span class="song-number">04</span><span class="song-icon">🎵</span><div><div class="song-name">Remember The Name</div><div class="song-artist">Fort Minor</div></div></div>
+                    <div class="song-item"><span class="song-number">05</span><span class="song-icon">🎵</span><div><div class="song-name">Thunderstruck</div><div class="song-artist">AC/DC</div></div></div>
                 </div>
             </div>
         </section>
@@ -1237,18 +999,14 @@
                 <div class="location-details">
                     <div class="location-name">מגרש הפאדל - חולון</div>
                     <div class="location-address">📍 הלוחמים 30, חולון</div>
-                    <a href="https://www.google.com/maps/search/הלוחמים+30+חולון" target="_blank" class="map-btn">
-                        🗺️ נווט לשם עכשיו
-                    </a>
+                    <a href="https://www.google.com/maps/search/הלוחמים+30+חולון" target="_blank" class="map-btn">🗺️ נווט לשם עכשיו</a>
                 </div>
             </div>
         </section>
 
         <!-- Share -->
         <section class="share-section fade-in">
-            <button class="share-btn" onclick="shareWhatsApp()">
-                📲 שתף בוואטסאפ
-            </button>
+            <button class="share-btn" onclick="shareWhatsApp()">📲 שתף בוואטסאפ</button>
         </section>
 
         <!-- Footer -->
@@ -1259,116 +1017,266 @@
         </footer>
     </div>
 
+    <!-- Supabase JS Client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script>
-        // Countdown Timer - set to today at 21:00
-        function updateCountdown() {
-            const now = new Date();
-            const today = new Date();
-            today.setHours(21, 0, 0, 0);
+    // ============================================
+    // 🔧 הגדרות SUPABASE - שנה את הערכים האלה!
+    // ============================================
+    const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE';       // למשל: https://abcdefg.supabase.co
+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE'; // המפתח הציבורי anon
+    // ============================================
 
-            // If it's already past 21:00, show zeros
-            let diff = today - now;
-            if (diff < 0) diff = 0;
+    // יצירת מזהה ייחודי למשתמש (fingerprint)
+    function getVoterId() {
+        let id = localStorage.getItem('padel_voter_id');
+        if (!id) {
+            id = 'voter_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            localStorage.setItem('padel_voter_id', id);
+        }
+        return id;
+    }
 
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    const VOTER_ID = getVoterId();
 
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    // פונקציה לשליחת בקשות ל-Supabase REST API
+    async function supabaseRequest(path, method, body) {
+        const url = `${SUPABASE_URL}/rest/v1/${path}`;
+        const headers = {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': method === 'POST' ? 'return=representation' : 'return=representation'
+        };
+
+        const options = { method, headers };
+        if (body) options.body = JSON.stringify(body);
+
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(errorText);
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        const text = await response.text();
+        return text ? JSON.parse(text) : null;
+    }
 
-        // Voting System
-        let votes = { orange: 0, blue: 0 };
+    // פונקציה לקריאת RPC
+    async function supabaseRPC(functionName) {
+        const url = `${SUPABASE_URL}/rest/v1/rpc/${functionName}`;
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        if (!response.ok) throw new Error(await response.text());
+        return response.json();
+    }
 
-        // Load votes from localStorage
-        const savedVotes = localStorage.getItem('padelVotes');
-        if (savedVotes) {
-            votes = JSON.parse(savedVotes);
-            updateVoteDisplay();
-        }
+    // טען הצבעות קיימות
+    async function loadVotes() {
+        try {
+            // קבל ספירת הצבעות
+            const counts = await supabaseRPC('get_vote_counts');
 
-        const userVoted = localStorage.getItem('padelUserVoted');
-        if (userVoted) {
-            document.querySelector(`.vote-btn.${userVoted}`).classList.add('active');
-            document.getElementById('voteResults').style.display = 'flex';
-            updateVoteDisplay();
-        }
+            const orange = parseInt(counts.orange) || 0;
+            const blue = parseInt(counts.blue) || 0;
+            const total = parseInt(counts.total) || 0;
 
-        function vote(team) {
-            if (localStorage.getItem('padelUserVoted')) {
-                // Already voted, allow changing
-                const prevTeam = localStorage.getItem('padelUserVoted');
-                if (prevTeam === team) return;
-                votes[prevTeam]--;
-                document.querySelector(`.vote-btn.${prevTeam}`).classList.remove('active');
+            if (total > 0) {
+                document.getElementById('voteResults').style.display = 'flex';
+                updateVoteDisplay(orange, blue, total);
             }
 
-            votes[team]++;
-            localStorage.setItem('padelVotes', JSON.stringify(votes));
-            localStorage.setItem('padelUserVoted', team);
+            // בדוק אם המשתמש כבר הצביע
+            const myVote = await supabaseRequest(
+                `votes?voter_id=eq.${VOTER_ID}&select=team`,
+                'GET'
+            );
 
-            document.querySelector(`.vote-btn.${team}`).classList.add('active');
+            if (myVote && myVote.length > 0) {
+                const team = myVote[0].team;
+                document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
+                localStorage.setItem('padel_my_vote', team);
+            }
+        } catch (error) {
+            console.log('Error loading votes:', error);
+        }
+    }
+
+    // הצבעה
+    async function vote(team) {
+        const btnOrange = document.getElementById('btnOrange');
+        const btnBlue = document.getElementById('btnBlue');
+        const statusEl = document.getElementById('voteStatus');
+
+        // בדוק אם כבר הצביע לאותה קבוצה
+        const currentVote = localStorage.getItem('padel_my_vote');
+        if (currentVote === team) {
+            statusEl.innerHTML = '<div class="vote-status success">כבר הצבעת לקבוצה הזו! ✅</div>';
+            return;
+        }
+
+        // Disable buttons during vote
+        btnOrange.disabled = true;
+        btnBlue.disabled = true;
+        statusEl.innerHTML = '<div class="vote-status loading">⏳ שומר הצבעה...</div>';
+
+        try {
+            if (currentVote) {
+                // עדכן הצבעה קיימת
+                await supabaseRequest(
+                    `votes?voter_id=eq.${VOTER_ID}`,
+                    'PATCH',
+                    { team: team }
+                );
+            } else {
+                // הצבעה חדשה
+                await supabaseRequest(
+                    'votes',
+                    'POST',
+                    { voter_id: VOTER_ID, team: team }
+                );
+            }
+
+            // עדכן UI
+            localStorage.setItem('padel_my_vote', team);
+            btnOrange.classList.remove('active');
+            btnBlue.classList.remove('active');
+            document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
+
+            // טען מחדש את הספירה
+            const counts = await supabaseRPC('get_vote_counts');
+            const orange = parseInt(counts.orange) || 0;
+            const blue = parseInt(counts.blue) || 0;
+            const total = parseInt(counts.total) || 0;
+
             document.getElementById('voteResults').style.display = 'flex';
+            updateVoteDisplay(orange, blue, total);
 
-            updateVoteDisplay();
+            statusEl.innerHTML = '<div class="vote-status success">ההצבעה נשמרה בהצלחה! ✅</div>';
+            setTimeout(() => { statusEl.innerHTML = ''; }, 3000);
+
             createConfetti();
-        }
 
-        function updateVoteDisplay() {
-            const total = votes.orange + votes.blue;
-            if (total === 0) return;
+        } catch (error) {
+            console.error('Vote error:', error);
 
-            const orangePct = Math.round((votes.orange / total) * 100);
-            const bluePct = 100 - orangePct;
+            // אם זו שגיאת כפילות, נסה עדכון
+            if (error.message.includes('duplicate') || error.message.includes('unique')) {
+                try {
+                    await supabaseRequest(
+                        `votes?voter_id=eq.${VOTER_ID}`,
+                        'PATCH',
+                        { team: team }
+                    );
+                    localStorage.setItem('padel_my_vote', team);
+                    btnOrange.classList.remove('active');
+                    btnBlue.classList.remove('active');
+                    document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
 
-            document.getElementById('orangePercent').textContent = orangePct + '%';
-            document.getElementById('bluePercent').textContent = bluePct + '%';
-            document.getElementById('orangeBar').style.width = orangePct + '%';
-            document.getElementById('blueBar').style.width = bluePct + '%';
-            document.getElementById('totalVotes').textContent = `סה"כ ${total} הצבעות`;
-        }
+                    const counts = await supabaseRPC('get_vote_counts');
+                    updateVoteDisplay(parseInt(counts.orange)||0, parseInt(counts.blue)||0, parseInt(counts.total)||0);
+                    document.getElementById('voteResults').style.display = 'flex';
 
-        function createConfetti() {
-            const emojis = ['🎉', '🎊', '✨', '⭐', '🏆', '🎾', '🔥', '⚡'];
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
-                    document.body.appendChild(confetti);
-                    setTimeout(() => confetti.remove(), 4000);
-                }, i * 100);
-            }
-        }
-
-        // WhatsApp Share
-        function shareWhatsApp() {
-            const text = `🎾🔥 *הפאדל של שלם - מאבק הערב!*\n\n` +
-                `⚔️ שלם & מרקו VS מנגב & דודי\n` +
-                `📅 היום | 🕘 21:00\n` +
-                `📍 הלוחמים 30, חולון\n\n` +
-                `בואו לצפות ולהצביע מי ינצח! 👇\n` +
-                window.location.href;
-            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
-        }
-
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    statusEl.innerHTML = '<div class="vote-status success">ההצבעה עודכנה! ✅</div>';
+                    setTimeout(() => { statusEl.innerHTML = ''; }, 3000);
+                    createConfetti();
+                } catch (e2) {
+                    statusEl.innerHTML = '<div class="vote-status error">שגיאה בשמירה. נסה שוב 😕</div>';
                 }
-            });
-        }, { threshold: 0.1 });
+            } else {
+                statusEl.innerHTML = '<div class="vote-status error">שגיאה בשמירה. נסה שוב 😕</div>';
+            }
+        } finally {
+            btnOrange.disabled = false;
+            btnBlue.disabled = false;
+        }
+    }
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    function updateVoteDisplay(orange, blue, total) {
+        if (total === 0) return;
+        const orangePct = Math.round((orange / total) * 100);
+        const bluePct = 100 - orangePct;
+
+        document.getElementById('orangePercent').textContent = orangePct + '%';
+        document.getElementById('bluePercent').textContent = bluePct + '%';
+        document.getElementById('orangeBar').style.width = orangePct + '%';
+        document.getElementById('blueBar').style.width = bluePct + '%';
+        document.getElementById('totalVotes').textContent = `סה"כ ${total} הצבעות 🗳️`;
+    }
+
+    // רענון אוטומטי של ההצבעות כל 5 שניות
+    setInterval(async () => {
+        try {
+            const counts = await supabaseRPC('get_vote_counts');
+            const orange = parseInt(counts.orange) || 0;
+            const blue = parseInt(counts.blue) || 0;
+            const total = parseInt(counts.total) || 0;
+            if (total > 0) {
+                document.getElementById('voteResults').style.display = 'flex';
+                updateVoteDisplay(orange, blue, total);
+            }
+        } catch (e) {
+            // שקט - לא מציג שגיאה
+        }
+    }, 5000);
+
+    function createConfetti() {
+        const emojis = ['🎉', '🎊', '✨', '⭐', '🏆', '🎾', '🔥', '⚡'];
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 4000);
+            }, i * 100);
+        }
+    }
+
+    function shareWhatsApp() {
+        const text = `🎾🔥 *הפאדל של שלם - מאבק הערב!*\n\n⚔️ שלם & מרקו VS מנגב & דודי\n📅 היום | 🕘 21:00\n📍 הלוחמים 30, חולון\n\nבואו לצפות ולהצביע מי ינצח! 👇\n${window.location.href}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // Countdown
+    function updateCountdown() {
+        const now = new Date();
+        const today = new Date();
+        today.setHours(21, 0, 0, 0);
+        let diff = today - now;
+        if (diff < 0) diff = 0;
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // טען הצבעות בטעינת הדף
+    loadVotes();
     </script>
 </body>
 </html>
