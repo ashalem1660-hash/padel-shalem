@@ -7,11 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Heebo', sans-serif;
@@ -22,10 +18,7 @@
 
         .bg-animation {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             z-index: 0;
             background: 
                 radial-gradient(ellipse at 20% 50%, rgba(255, 107, 0, 0.08) 0%, transparent 50%),
@@ -34,31 +27,19 @@
         }
 
         .container {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+            position: relative; z-index: 1;
+            max-width: 900px; margin: 0 auto; padding: 20px;
         }
 
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
+        .hero { text-align: center; padding: 40px 20px; }
 
         .hero-badge {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b00, #ff9500);
-            color: #fff;
-            padding: 8px 24px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
+            color: #fff; padding: 8px 24px; border-radius: 50px;
+            font-size: 14px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 20px; animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
@@ -67,63 +48,34 @@
         }
 
         .hero h1 {
-            font-size: 3em;
-            font-weight: 900;
+            font-size: 3em; font-weight: 900;
             background: linear-gradient(135deg, #fff, #ffd700, #ff6b00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            line-height: 1.2;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text; margin-bottom: 10px; line-height: 1.2;
         }
 
-        .hero .subtitle {
-            font-size: 1.3em;
-            color: #aaa;
-            margin-bottom: 30px;
-        }
+        .hero .subtitle { font-size: 1.3em; color: #aaa; margin-bottom: 30px; }
 
-        .match-info-bar {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
+        .match-info-bar { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px; }
 
         .info-chip {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-size: 15px;
+            display: flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            padding: 12px 20px; border-radius: 50px; font-size: 15px;
             backdrop-filter: blur(10px);
         }
 
         .info-chip .icon { font-size: 20px; }
 
         .vs-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-            flex-wrap: wrap;
+            display: flex; align-items: center; justify-content: center;
+            gap: 20px; margin: 40px 0; flex-wrap: wrap;
         }
 
         .team-card {
-            flex: 1;
-            min-width: 280px;
-            max-width: 400px;
-            border-radius: 24px;
-            padding: 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s;
+            flex: 1; min-width: 280px; max-width: 400px;
+            border-radius: 24px; padding: 30px; text-align: center;
+            overflow: hidden; transition: transform 0.3s;
         }
 
         .team-card:hover { transform: translateY(-5px); }
@@ -138,38 +90,17 @@
             border: 1px solid rgba(0, 163, 255, 0.3);
         }
 
-        .team-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            opacity: 0.7;
-        }
-
-        .team-names {
-            font-size: 1.8em;
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-
+        .team-label { font-size: 12px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; opacity: 0.7; }
+        .team-names { font-size: 1.8em; font-weight: 900; margin-bottom: 5px; }
         .team-a .team-names { color: #ff8c00; }
         .team-b .team-names { color: #00a3ff; }
-
         .team-emoji { font-size: 3em; margin-bottom: 10px; }
 
         .vs-badge {
             background: linear-gradient(135deg, #ffd700, #ff6b00);
-            color: #000;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            font-weight: 900;
-            flex-shrink: 0;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            color: #000; width: 70px; height: 70px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5em; font-weight: 900; flex-shrink: 0;
             animation: vsGlow 2s infinite alternate;
         }
 
@@ -181,464 +112,220 @@
         .players-section { margin: 50px 0; }
 
         .section-title {
-            text-align: center;
-            font-size: 2em;
-            font-weight: 900;
-            margin-bottom: 30px;
+            text-align: center; font-size: 2em; font-weight: 900; margin-bottom: 30px;
             background: linear-gradient(135deg, #ffd700, #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
-        .players-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+        .players-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 
         .player-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 25px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; padding: 25px; position: relative;
+            overflow: hidden; transition: all 0.3s;
         }
 
-        .player-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.06);
-        }
+        .player-card:hover { transform: translateY(-3px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); }
 
         .player-card .team-indicator {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 60px;
-            height: 60px;
-            border-radius: 0 20px 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+            position: absolute; top: 0; right: 0; width: 60px; height: 60px;
+            border-radius: 0 20px 0 20px; display: flex;
+            align-items: center; justify-content: center; font-size: 24px;
         }
 
-        .player-card.team-orange .team-indicator {
-            background: linear-gradient(135deg, rgba(255, 107, 0, 0.3), rgba(255, 107, 0, 0.1));
-        }
-
-        .player-card.team-blue .team-indicator {
-            background: linear-gradient(135deg, rgba(0, 163, 255, 0.3), rgba(0, 163, 255, 0.1));
-        }
+        .player-card.team-orange .team-indicator { background: linear-gradient(135deg, rgba(255, 107, 0, 0.3), rgba(255, 107, 0, 0.1)); }
+        .player-card.team-blue .team-indicator { background: linear-gradient(135deg, rgba(0, 163, 255, 0.3), rgba(0, 163, 255, 0.1)); }
 
         .player-avatar { font-size: 4em; margin-bottom: 10px; }
-
         .player-name { font-size: 1.6em; font-weight: 900; margin-bottom: 5px; }
         .player-card.team-orange .player-name { color: #ff8c00; }
         .player-card.team-blue .player-name { color: #00a3ff; }
-
-        .player-role {
-            font-size: 13px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
+        .player-role { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
 
         .player-bio {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #ccc;
-            margin-bottom: 20px;
-            border-right: 3px solid;
-            padding-right: 15px;
+            font-size: 15px; line-height: 1.7; color: #ccc;
+            margin-bottom: 20px; border-right: 3px solid; padding-right: 15px;
         }
 
         .player-card.team-orange .player-bio { border-color: rgba(255, 107, 0, 0.3); }
         .player-card.team-blue .player-bio { border-color: rgba(0, 163, 255, 0.3); }
 
         .hunger-meter { margin-top: 15px; }
-
-        .hunger-label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-            font-size: 13px;
-            color: #999;
-        }
-
-        .hunger-bar {
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .hunger-fill {
-            height: 100%;
-            border-radius: 10px;
-            transition: width 2s ease;
-            position: relative;
-        }
+        .hunger-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; color: #999; }
+        .hunger-bar { height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .hunger-fill { height: 100%; border-radius: 10px; transition: width 2s ease; position: relative; }
 
         .hunger-fill::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             animation: shimmer 2s infinite;
         }
 
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
 
-        .player-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 10px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-        }
-
+        .player-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+        .stat { text-align: center; padding: 10px; background: rgba(255,255,255,0.03); border-radius: 12px; }
         .stat-value { font-size: 1.3em; font-weight: 900; }
-
-        .stat-label {
-            font-size: 10px;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .stat-label { font-size: 10px; color: #777; text-transform: uppercase; letter-spacing: 1px; }
 
         .player-quote {
-            margin-top: 15px;
-            padding: 12px 15px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            font-style: italic;
-            color: #aaa;
-            font-size: 14px;
-            text-align: center;
+            margin-top: 15px; padding: 12px 15px; background: rgba(255,255,255,0.03);
+            border-radius: 12px; font-style: italic; color: #aaa; font-size: 14px; text-align: center;
         }
-
         .player-quote::before { content: '"'; }
         .player-quote::after { content: '"'; }
 
         .countdown-section {
-            text-align: center;
-            margin: 50px 0;
-            padding: 40px;
+            text-align: center; margin: 50px 0; padding: 40px;
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 107, 0, 0.05));
-            border: 1px solid rgba(255, 215, 0, 0.15);
-            border-radius: 24px;
+            border: 1px solid rgba(255, 215, 0, 0.15); border-radius: 24px;
         }
 
-        .countdown-title {
-            font-size: 1.2em;
-            color: #ffd700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+        .countdown-title { font-size: 1.2em; color: #ffd700; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 3px; }
+        .countdown-timer { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 
         .countdown-unit {
-            background: rgba(0,0,0,0.4);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 16px;
-            padding: 15px 20px;
-            min-width: 90px;
+            background: rgba(0,0,0,0.4); border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 16px; padding: 15px 20px; min-width: 90px;
         }
 
-        .countdown-number {
-            font-size: 2.5em;
-            font-weight: 900;
-            color: #ffd700;
-            line-height: 1;
-        }
-
-        .countdown-label {
-            font-size: 11px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 5px;
-        }
+        .countdown-number { font-size: 2.5em; font-weight: 900; color: #ffd700; line-height: 1; }
+        .countdown-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px; }
 
         .predictions-section { margin: 50px 0; }
 
         .prediction-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; padding: 30px; text-align: center;
         }
 
-        .vote-container {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin: 25px 0;
-            flex-wrap: wrap;
-        }
+        .vote-container { display: flex; gap: 15px; justify-content: center; margin: 25px 0; flex-wrap: wrap; }
 
         .vote-btn {
-            padding: 15px 35px;
-            border: 2px solid;
-            border-radius: 16px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Heebo', sans-serif;
-            background: transparent;
-            color: #fff;
-            min-width: 180px;
+            padding: 15px 35px; border: 2px solid; border-radius: 16px;
+            font-size: 16px; font-weight: 700; cursor: pointer;
+            transition: all 0.3s; font-family: 'Heebo', sans-serif;
+            background: transparent; color: #fff; min-width: 180px;
         }
 
-        .vote-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
+        .vote-btn:disabled { opacity: 0.6; cursor: wait; }
         .vote-btn.orange { border-color: rgba(255, 107, 0, 0.5); }
-        .vote-btn.orange:hover:not(:disabled) {
-            background: rgba(255, 107, 0, 0.2);
-            border-color: #ff6b00;
-            transform: scale(1.05);
-        }
-
+        .vote-btn.orange:hover:not(:disabled) { background: rgba(255, 107, 0, 0.2); border-color: #ff6b00; transform: scale(1.05); }
         .vote-btn.blue { border-color: rgba(0, 163, 255, 0.5); }
-        .vote-btn.blue:hover:not(:disabled) {
-            background: rgba(0, 163, 255, 0.2);
-            border-color: #00a3ff;
-            transform: scale(1.05);
-        }
+        .vote-btn.blue:hover:not(:disabled) { background: rgba(0, 163, 255, 0.2); border-color: #00a3ff; transform: scale(1.05); }
 
         .vote-btn.active.orange {
             background: linear-gradient(135deg, rgba(255, 107, 0, 0.3), rgba(255, 60, 0, 0.15));
-            border-color: #ff6b00;
-            box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
+            border-color: #ff6b00; box-shadow: 0 0 20px rgba(255, 107, 0, 0.2);
         }
 
         .vote-btn.active.blue {
             background: linear-gradient(135deg, rgba(0, 163, 255, 0.3), rgba(0, 100, 255, 0.15));
-            border-color: #00a3ff;
-            box-shadow: 0 0 20px rgba(0, 163, 255, 0.2);
+            border-color: #00a3ff; box-shadow: 0 0 20px rgba(0, 163, 255, 0.2);
         }
 
-        .vote-results {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+        .vote-results { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
 
         .vote-bar-container {
-            flex: 1;
-            height: 12px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
+            flex: 1; height: 12px; background: rgba(255,255,255,0.1);
+            border-radius: 10px; overflow: hidden; display: flex;
         }
 
-        .vote-bar-orange {
-            background: linear-gradient(90deg, #ff6b00, #ff9500);
-            height: 100%;
-            transition: width 1s ease;
-        }
-
-        .vote-bar-blue {
-            background: linear-gradient(90deg, #00a3ff, #0066ff);
-            height: 100%;
-            transition: width 1s ease;
-        }
-
+        .vote-bar-orange { background: linear-gradient(90deg, #ff6b00, #ff9500); height: 100%; transition: width 1s ease; }
+        .vote-bar-blue { background: linear-gradient(90deg, #00a3ff, #0066ff); height: 100%; transition: width 1s ease; }
         .vote-percent { font-weight: 700; font-size: 14px; min-width: 45px; }
 
-        .vote-status {
-            margin-top: 12px;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 13px;
-            display: inline-block;
+        .vote-status-msg {
+            margin-top: 12px; padding: 8px 20px; border-radius: 50px;
+            font-size: 13px; display: inline-block;
         }
 
-        .vote-status.success {
-            background: rgba(0, 200, 83, 0.1);
-            color: #00c853;
-            border: 1px solid rgba(0, 200, 83, 0.2);
+        .vote-status-msg.success { background: rgba(0,200,83,0.1); color: #00c853; border: 1px solid rgba(0,200,83,0.2); }
+        .vote-status-msg.error { background: rgba(255,0,0,0.1); color: #ff4444; border: 1px solid rgba(255,0,0,0.2); }
+        .vote-status-msg.loading { background: rgba(255,215,0,0.1); color: #ffd700; border: 1px solid rgba(255,215,0,0.2); }
+
+        .live-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #00c853; margin-top: 8px; }
+
+        .live-dot {
+            width: 8px; height: 8px; background: #00c853; border-radius: 50%;
+            animation: livePulse 1.5s infinite;
         }
 
-        .vote-status.loading {
-            background: rgba(255, 215, 0, 0.1);
-            color: #ffd700;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-        }
-
-        .vote-status.error {
-            background: rgba(255, 0, 0, 0.1);
-            color: #ff4444;
-            border: 1px solid rgba(255, 0, 0, 0.2);
-        }
-
-        .location-section { margin: 50px 0; }
-
-        .location-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .location-map {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5em;
-            position: relative;
-        }
-
-        .location-map::after {
-            content: 'הלוחמים 30, חולון';
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 14px;
-            background: rgba(0,0,0,0.7);
-            padding: 8px 16px;
-            border-radius: 50px;
-        }
-
-        .location-details { padding: 25px; }
-        .location-name { font-size: 1.4em; font-weight: 700; margin-bottom: 10px; }
-        .location-address { color: #999; margin-bottom: 20px; }
-
-        .map-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #4285f4, #1a73e8);
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 15px;
-            transition: all 0.3s;
-            font-family: 'Heebo', sans-serif;
-        }
-
-        .map-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
-        }
-
-        .rules-section { margin: 50px 0; }
-
-        .rules-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 30px;
-        }
-
-        .rules-list { list-style: none; display: grid; gap: 15px; }
-
-        .rules-list li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: rgba(255,255,255,0.02);
-            border-radius: 12px;
-            font-size: 15px;
-            color: #ccc;
-            transition: background 0.3s;
-        }
-
-        .rules-list li:hover { background: rgba(255,255,255,0.05); }
-        .rules-list li .rule-icon { font-size: 24px; flex-shrink: 0; }
+        @keyframes livePulse { 0%,100% { opacity:1; transform: scale(1); } 50% { opacity:0.4; transform: scale(0.7); } }
 
         .trash-talk-section { margin: 50px 0; }
 
         .trash-talk-card {
             background: linear-gradient(135deg, rgba(255, 0, 60, 0.08), rgba(255, 107, 0, 0.05));
-            border: 1px solid rgba(255, 0, 60, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
+            border: 1px solid rgba(255, 0, 60, 0.2); border-radius: 20px; padding: 30px; text-align: center;
         }
 
         .trash-messages { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
 
-        .trash-msg {
-            padding: 15px 20px;
-            border-radius: 16px;
-            font-size: 15px;
-            transition: transform 0.3s;
-        }
-
+        .trash-msg { padding: 15px 20px; border-radius: 16px; font-size: 15px; transition: transform 0.3s; }
         .trash-msg:hover { transform: scale(1.02); }
 
         .trash-msg.from-orange {
-            background: rgba(255, 107, 0, 0.1);
-            border: 1px solid rgba(255, 107, 0, 0.2);
-            text-align: right;
-            margin-left: 40px;
+            background: rgba(255, 107, 0, 0.1); border: 1px solid rgba(255, 107, 0, 0.2);
+            text-align: right; margin-left: 40px;
         }
 
         .trash-msg.from-blue {
-            background: rgba(0, 163, 255, 0.1);
-            border: 1px solid rgba(0, 163, 255, 0.2);
-            text-align: left;
-            margin-right: 40px;
+            background: rgba(0, 163, 255, 0.1); border: 1px solid rgba(0, 163, 255, 0.2);
+            text-align: left; margin-right: 40px;
         }
 
         .trash-msg .msg-author { font-size: 12px; color: #888; margin-bottom: 5px; }
 
+        .weather-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; padding: 25px; text-align: center; margin: 50px 0;
+        }
+
+        .weather-temp { font-size: 3em; font-weight: 900; }
+        .weather-desc { color: #999; font-size: 14px; }
+
+        .rules-section { margin: 50px 0; }
+
+        .rules-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; padding: 30px;
+        }
+
+        .rules-list { list-style: none; display: grid; gap: 15px; }
+
+        .rules-list li {
+            display: flex; align-items: center; gap: 15px; padding: 15px;
+            background: rgba(255,255,255,0.02); border-radius: 12px;
+            font-size: 15px; color: #ccc; transition: background 0.3s;
+        }
+
+        .rules-list li:hover { background: rgba(255,255,255,0.05); }
+        .rules-list li .rule-icon { font-size: 24px; flex-shrink: 0; }
+
+        .mvp-section { margin: 50px 0; }
+
+        .mvp-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
+            border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 20px; padding: 30px; text-align: center;
+        }
+
+        .mvp-title { font-size: 1em; color: #ffd700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px; }
+        .mvp-trophy { font-size: 4em; margin: 10px 0; }
+        .mvp-text { color: #aaa; font-size: 15px; }
+
         .soundtrack-section { margin: 50px 0; }
 
         .soundtrack-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 30px;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; padding: 30px;
         }
 
         .song-list { display: grid; gap: 10px; margin-top: 20px; }
 
         .song-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px 15px;
-            background: rgba(255,255,255,0.02);
-            border-radius: 12px;
-            transition: background 0.3s;
+            display: flex; align-items: center; gap: 15px; padding: 12px 15px;
+            background: rgba(255,255,255,0.02); border-radius: 12px; transition: background 0.3s;
         }
 
         .song-item:hover { background: rgba(255,255,255,0.05); }
@@ -647,96 +334,65 @@
         .song-name { font-weight: 700; font-size: 14px; }
         .song-artist { font-size: 12px; color: #888; }
 
-        .weather-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 25px;
-            text-align: center;
-            margin: 50px 0;
+        .location-section { margin: 50px 0; }
+
+        .location-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px; overflow: hidden;
         }
 
-        .weather-temp { font-size: 3em; font-weight: 900; }
-        .weather-desc { color: #999; font-size: 14px; }
-
-        .mvp-section { margin: 50px 0; }
-
-        .mvp-card {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.02));
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
+        .location-map {
+            width: 100%; height: 250px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 5em; position: relative;
         }
 
-        .mvp-title { font-size: 1em; color: #ffd700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 5px; }
-        .mvp-trophy { font-size: 4em; margin: 10px 0; }
-        .mvp-text { color: #aaa; font-size: 15px; }
-
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #555;
-            font-size: 14px;
+        .location-map::after {
+            content: 'הלוחמים 30, חולון'; position: absolute;
+            bottom: 15px; left: 50%; transform: translateX(-50%);
+            font-size: 14px; background: rgba(0,0,0,0.7); padding: 8px 16px; border-radius: 50px;
         }
 
-        .footer .fire { font-size: 2em; margin-bottom: 10px; }
+        .location-details { padding: 25px; }
+        .location-name { font-size: 1.4em; font-weight: 700; margin-bottom: 10px; }
+        .location-address { color: #999; margin-bottom: 20px; }
+
+        .map-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: linear-gradient(135deg, #4285f4, #1a73e8);
+            color: #fff; text-decoration: none; padding: 14px 28px;
+            border-radius: 50px; font-weight: 700; font-size: 15px; transition: all 0.3s;
+        }
+
+        .map-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3); }
 
         .share-section { text-align: center; margin: 30px 0; }
 
         .share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-flex; align-items: center; gap: 10px;
             background: linear-gradient(135deg, #25d366, #128c7e);
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Heebo', sans-serif;
+            color: #fff; text-decoration: none; padding: 16px 32px;
+            border-radius: 50px; font-weight: 700; font-size: 16px;
+            border: none; cursor: pointer; transition: all 0.3s; font-family: 'Heebo', sans-serif;
         }
 
-        .share-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        .share-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+
+        .footer { text-align: center; padding: 40px 20px; color: #555; font-size: 14px; }
+        .footer .fire { font-size: 2em; margin-bottom: 10px; }
+
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .confetti {
+            position: fixed; top: -10px; z-index: 1000;
+            animation: confettiFall 3s linear forwards; font-size: 20px; pointer-events: none;
         }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .live-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            color: #00c853;
-            margin-top: 8px;
-        }
-
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background: #00c853;
-            border-radius: 50%;
-            animation: livePulse 1.5s infinite;
-        }
-
-        @keyframes livePulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+        @keyframes confettiFall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
 
         @media (max-width: 600px) {
@@ -748,26 +404,12 @@
             .countdown-number { font-size: 2em; }
             .vote-container { flex-direction: column; align-items: center; }
         }
-
-        .confetti {
-            position: fixed;
-            top: -10px;
-            z-index: 1000;
-            animation: confettiFall 3s linear forwards;
-            font-size: 20px;
-            pointer-events: none;
-        }
-
-        @keyframes confettiFall {
-            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
     </style>
 </head>
 <body>
     <div class="bg-animation"></div>
-
     <div class="container">
+
         <!-- Hero -->
         <section class="hero">
             <div class="hero-badge">🔴 LIVE TONIGHT</div>
@@ -909,22 +551,18 @@
             </div>
         </section>
 
-        <!-- Prediction with Supabase -->
+        <!-- Voting with Supabase -->
         <section class="predictions-section fade-in">
             <h2 class="section-title">🔮 מי לוקח את הערב?</h2>
             <div class="prediction-card">
                 <p style="color: #aaa; margin-bottom: 5px;">הצביעו למי שלדעתכם ינצח הערב!</p>
                 <div class="live-indicator">
                     <div class="live-dot"></div>
-                    <span>הצבעות בזמן אמת מ-Supabase</span>
+                    <span>הצבעות בזמן אמת</span>
                 </div>
                 <div class="vote-container">
-                    <button class="vote-btn orange" id="btnOrange" onclick="vote('orange')">
-                        🔥 שלם & מרקו
-                    </button>
-                    <button class="vote-btn blue" id="btnBlue" onclick="vote('blue')">
-                        ⚡ מנגב & דודי
-                    </button>
+                    <button class="vote-btn orange" id="btnOrange" onclick="vote('orange')">🔥 שלם & מרקו</button>
+                    <button class="vote-btn blue" id="btnBlue" onclick="vote('blue')">⚡ מנגב & דודי</button>
                 </div>
                 <div class="vote-results" id="voteResults" style="display: none;">
                     <span class="vote-percent" id="orangePercent" style="color: #ff8c00;">0%</span>
@@ -1017,72 +655,56 @@
         </footer>
     </div>
 
-    <!-- Supabase JS Client -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script>
-    // ============================================
-    // 🔧 הגדרות SUPABASE - שנה את הערכים האלה!
-    // ============================================
-    const SUPABASE_URL = https://xsebrhtmnqyhmvgwufei.supabase.co;       // למשל: https://abcdefg.supabase.co
-    const SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzZWJyaHRtbnF5aG12Z3d1ZmVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwMTY5MDAsImV4cCI6MjA4NzU5MjkwMH0.QlnCqrwPoxgeR-w699UeGRQl-eVGLCCVHrWsdaa3qV8; // המפתח הציבורי anon
-    // ============================================
+    // =============================================
+    // SUPABASE CONFIG - המפתחות שלך!
+    // =============================================
+    const SUPABASE_URL = 'https://xsebrhtmnqyhmvgwufei.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzZWJyaHRtbnF5aG12Z3d1ZmVpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwMTY5MDAsImV4cCI6MjA4NzU5MjkwMH0.QlnCqrwPoxgeR-w699UeGRQl-eVGLCCVHrWsdaa3qV8';
+    // =============================================
 
-    // יצירת מזהה ייחודי למשתמש (fingerprint)
+    // מזהה ייחודי לכל משתמש
     function getVoterId() {
         let id = localStorage.getItem('padel_voter_id');
         if (!id) {
-            id = 'voter_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            id = 'v_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             localStorage.setItem('padel_voter_id', id);
         }
         return id;
     }
 
     const VOTER_ID = getVoterId();
+    const HEADERS = {
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=representation'
+    };
 
-    // פונקציה לשליחת בקשות ל-Supabase REST API
-    async function supabaseRequest(path, method, body) {
-        const url = `${SUPABASE_URL}/rest/v1/${path}`;
-        const headers = {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-            'Content-Type': 'application/json',
-            'Prefer': method === 'POST' ? 'return=representation' : 'return=representation'
-        };
-
-        const options = { method, headers };
-        if (body) options.body = JSON.stringify(body);
-
-        const response = await fetch(url, options);
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(errorText);
-        }
-
-        const text = await response.text();
-        return text ? JSON.parse(text) : null;
-    }
-
-    // פונקציה לקריאת RPC
-    async function supabaseRPC(functionName) {
-        const url = `${SUPABASE_URL}/rest/v1/rpc/${functionName}`;
-        const response = await fetch(url, {
+    // קריאת ספירת הצבעות
+    async function fetchVoteCounts() {
+        const res = await fetch(SUPABASE_URL + '/rest/v1/rpc/get_vote_counts', {
             method: 'POST',
-            headers: {
-                'apikey': SUPABASE_ANON_KEY,
-                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-                'Content-Type': 'application/json'
-            }
+            headers: HEADERS
         });
-        if (!response.ok) throw new Error(await response.text());
-        return response.json();
+        if (!res.ok) throw new Error(await res.text());
+        return await res.json();
     }
 
-    // טען הצבעות קיימות
+    // בדיקה אם כבר הצבעתי
+    async function fetchMyVote() {
+        const res = await fetch(
+            SUPABASE_URL + '/rest/v1/votes?voter_id=eq.' + VOTER_ID + '&select=team',
+            { headers: HEADERS }
+        );
+        if (!res.ok) throw new Error(await res.text());
+        return await res.json();
+    }
+
+    // טען הצבעות בטעינת העמוד
     async function loadVotes() {
         try {
-            // קבל ספירת הצבעות
-            const counts = await supabaseRPC('get_vote_counts');
-
+            const counts = await fetchVoteCounts();
             const orange = parseInt(counts.orange) || 0;
             const blue = parseInt(counts.blue) || 0;
             const total = parseInt(counts.total) || 0;
@@ -1092,65 +714,71 @@
                 updateVoteDisplay(orange, blue, total);
             }
 
-            // בדוק אם המשתמש כבר הצביע
-            const myVote = await supabaseRequest(
-                `votes?voter_id=eq.${VOTER_ID}&select=team`,
-                'GET'
-            );
-
-            if (myVote && myVote.length > 0) {
-                const team = myVote[0].team;
-                document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
+            const myVoteArr = await fetchMyVote();
+            if (myVoteArr && myVoteArr.length > 0) {
+                const team = myVoteArr[0].team;
+                document.getElementById(team === 'orange' ? 'btnOrange' : 'btnBlue').classList.add('active');
                 localStorage.setItem('padel_my_vote', team);
             }
-        } catch (error) {
-            console.log('Error loading votes:', error);
+        } catch (err) {
+            console.log('Error loading votes:', err);
         }
     }
 
     // הצבעה
     async function vote(team) {
-        const btnOrange = document.getElementById('btnOrange');
-        const btnBlue = document.getElementById('btnBlue');
+        const btnO = document.getElementById('btnOrange');
+        const btnB = document.getElementById('btnBlue');
         const statusEl = document.getElementById('voteStatus');
-
-        // בדוק אם כבר הצביע לאותה קבוצה
         const currentVote = localStorage.getItem('padel_my_vote');
+
         if (currentVote === team) {
-            statusEl.innerHTML = '<div class="vote-status success">כבר הצבעת לקבוצה הזו! ✅</div>';
+            statusEl.innerHTML = '<div class="vote-status-msg success">כבר הצבעת לקבוצה הזו! ✅</div>';
+            setTimeout(() => statusEl.innerHTML = '', 3000);
             return;
         }
 
-        // Disable buttons during vote
-        btnOrange.disabled = true;
-        btnBlue.disabled = true;
-        statusEl.innerHTML = '<div class="vote-status loading">⏳ שומר הצבעה...</div>';
+        btnO.disabled = true;
+        btnB.disabled = true;
+        statusEl.innerHTML = '<div class="vote-status-msg loading">⏳ שומר הצבעה...</div>';
 
         try {
             if (currentVote) {
                 // עדכן הצבעה קיימת
-                await supabaseRequest(
-                    `votes?voter_id=eq.${VOTER_ID}`,
-                    'PATCH',
-                    { team: team }
+                const res = await fetch(
+                    SUPABASE_URL + '/rest/v1/votes?voter_id=eq.' + VOTER_ID,
+                    { method: 'PATCH', headers: HEADERS, body: JSON.stringify({ team: team }) }
                 );
+                if (!res.ok) throw new Error(await res.text());
             } else {
                 // הצבעה חדשה
-                await supabaseRequest(
-                    'votes',
-                    'POST',
-                    { voter_id: VOTER_ID, team: team }
+                const res = await fetch(
+                    SUPABASE_URL + '/rest/v1/votes',
+                    { method: 'POST', headers: HEADERS, body: JSON.stringify({ voter_id: VOTER_ID, team: team }) }
                 );
+                if (!res.ok) {
+                    const errText = await res.text();
+                    // אם כפילות - נסה עדכון
+                    if (errText.includes('duplicate') || errText.includes('unique') || errText.includes('23505')) {
+                        const res2 = await fetch(
+                            SUPABASE_URL + '/rest/v1/votes?voter_id=eq.' + VOTER_ID,
+                            { method: 'PATCH', headers: HEADERS, body: JSON.stringify({ team: team }) }
+                        );
+                        if (!res2.ok) throw new Error(await res2.text());
+                    } else {
+                        throw new Error(errText);
+                    }
+                }
             }
 
             // עדכן UI
             localStorage.setItem('padel_my_vote', team);
-            btnOrange.classList.remove('active');
-            btnBlue.classList.remove('active');
-            document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
+            btnO.classList.remove('active');
+            btnB.classList.remove('active');
+            document.getElementById(team === 'orange' ? 'btnOrange' : 'btnBlue').classList.add('active');
 
-            // טען מחדש את הספירה
-            const counts = await supabaseRPC('get_vote_counts');
+            // רענן ספירה
+            const counts = await fetchVoteCounts();
             const orange = parseInt(counts.orange) || 0;
             const blue = parseInt(counts.blue) || 0;
             const total = parseInt(counts.total) || 0;
@@ -1158,62 +786,35 @@
             document.getElementById('voteResults').style.display = 'flex';
             updateVoteDisplay(orange, blue, total);
 
-            statusEl.innerHTML = '<div class="vote-status success">ההצבעה נשמרה בהצלחה! ✅</div>';
-            setTimeout(() => { statusEl.innerHTML = ''; }, 3000);
-
+            statusEl.innerHTML = '<div class="vote-status-msg success">ההצבעה נשמרה! ✅</div>';
+            setTimeout(() => statusEl.innerHTML = '', 3000);
             createConfetti();
 
-        } catch (error) {
-            console.error('Vote error:', error);
-
-            // אם זו שגיאת כפילות, נסה עדכון
-            if (error.message.includes('duplicate') || error.message.includes('unique')) {
-                try {
-                    await supabaseRequest(
-                        `votes?voter_id=eq.${VOTER_ID}`,
-                        'PATCH',
-                        { team: team }
-                    );
-                    localStorage.setItem('padel_my_vote', team);
-                    btnOrange.classList.remove('active');
-                    btnBlue.classList.remove('active');
-                    document.getElementById(`btn${team === 'orange' ? 'Orange' : 'Blue'}`).classList.add('active');
-
-                    const counts = await supabaseRPC('get_vote_counts');
-                    updateVoteDisplay(parseInt(counts.orange)||0, parseInt(counts.blue)||0, parseInt(counts.total)||0);
-                    document.getElementById('voteResults').style.display = 'flex';
-
-                    statusEl.innerHTML = '<div class="vote-status success">ההצבעה עודכנה! ✅</div>';
-                    setTimeout(() => { statusEl.innerHTML = ''; }, 3000);
-                    createConfetti();
-                } catch (e2) {
-                    statusEl.innerHTML = '<div class="vote-status error">שגיאה בשמירה. נסה שוב 😕</div>';
-                }
-            } else {
-                statusEl.innerHTML = '<div class="vote-status error">שגיאה בשמירה. נסה שוב 😕</div>';
-            }
+        } catch (err) {
+            console.error('Vote error:', err);
+            statusEl.innerHTML = '<div class="vote-status-msg error">שגיאה בשמירה 😕 נסה שוב</div>';
+            setTimeout(() => statusEl.innerHTML = '', 4000);
         } finally {
-            btnOrange.disabled = false;
-            btnBlue.disabled = false;
+            btnO.disabled = false;
+            btnB.disabled = false;
         }
     }
 
     function updateVoteDisplay(orange, blue, total) {
         if (total === 0) return;
-        const orangePct = Math.round((orange / total) * 100);
-        const bluePct = 100 - orangePct;
-
-        document.getElementById('orangePercent').textContent = orangePct + '%';
-        document.getElementById('bluePercent').textContent = bluePct + '%';
-        document.getElementById('orangeBar').style.width = orangePct + '%';
-        document.getElementById('blueBar').style.width = bluePct + '%';
-        document.getElementById('totalVotes').textContent = `סה"כ ${total} הצבעות 🗳️`;
+        const oPct = Math.round((orange / total) * 100);
+        const bPct = 100 - oPct;
+        document.getElementById('orangePercent').textContent = oPct + '%';
+        document.getElementById('bluePercent').textContent = bPct + '%';
+        document.getElementById('orangeBar').style.width = oPct + '%';
+        document.getElementById('blueBar').style.width = bPct + '%';
+        document.getElementById('totalVotes').textContent = 'סה"כ ' + total + ' הצבעות 🗳️';
     }
 
-    // רענון אוטומטי של ההצבעות כל 5 שניות
+    // רענון כל 5 שניות
     setInterval(async () => {
         try {
-            const counts = await supabaseRPC('get_vote_counts');
+            const counts = await fetchVoteCounts();
             const orange = parseInt(counts.orange) || 0;
             const blue = parseInt(counts.blue) || 0;
             const total = parseInt(counts.total) || 0;
@@ -1221,61 +822,53 @@
                 document.getElementById('voteResults').style.display = 'flex';
                 updateVoteDisplay(orange, blue, total);
             }
-        } catch (e) {
-            // שקט - לא מציג שגיאה
-        }
+        } catch (e) {}
     }, 5000);
 
     function createConfetti() {
         const emojis = ['🎉', '🎊', '✨', '⭐', '🏆', '🎾', '🔥', '⚡'];
         for (let i = 0; i < 20; i++) {
             setTimeout(() => {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
-                document.body.appendChild(confetti);
-                setTimeout(() => confetti.remove(), 4000);
+                const c = document.createElement('div');
+                c.className = 'confetti';
+                c.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                c.style.left = Math.random() * 100 + 'vw';
+                c.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(c);
+                setTimeout(() => c.remove(), 4000);
             }, i * 100);
         }
-    }
-
-    function shareWhatsApp() {
-        const text = `🎾🔥 *הפאדל של שלם - מאבק הערב!*\n\n⚔️ שלם & מרקו VS מנגב & דודי\n📅 היום | 🕘 21:00\n📍 הלוחמים 30, חולון\n\nבואו לצפות ולהצביע מי ינצח! 👇\n${window.location.href}`;
-        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
     }
 
     // Countdown
     function updateCountdown() {
         const now = new Date();
-        const today = new Date();
-        today.setHours(21, 0, 0, 0);
-        let diff = today - now;
+        const target = new Date();
+        target.setHours(21, 0, 0, 0);
+        let diff = target - now;
         if (diff < 0) diff = 0;
-
-        const hours = Math.floor(diff / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        document.getElementById('hours').textContent = String(Math.floor(diff / 3600000)).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
     }
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
+    // WhatsApp
+    function shareWhatsApp() {
+        const text = '🎾🔥 *הפאדל של שלם - מאבק הערב!*\n\n⚔️ שלם & מרקו VS מנגב & דודי\n📅 היום | 🕘 21:00\n📍 הלוחמים 30, חולון\n\nבואו להצביע מי ינצח! 👇\n' + window.location.href;
+        window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    }
+
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // טען הצבעות בטעינת הדף
+    // טען הצבעות!
     loadVotes();
     </script>
 </body>
